@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?
+family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <section class="hero2">
+        <div class="main-width">
+            <header>
+                <a href="../index.html">
+                    <div class="logo">
+
+                        <i class="fa-solid fa-a"></i>
+
+                    </div>
+                </a>
+
+
+                <nav>
+                    <div class="hamb">
+                        <span>
+
+                        </span>
+                        <span>
+
+                        </span>
+                        <span>
+
+                        </span>
+                    </div>
+
+                    <ul class="nav-list">
+                        <li>
+                            <a href="../index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a href="parcourstimeline.html">
+                                My Journey
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cometences.html">
+                                My Skills
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="passions.html">
+                                My Passions
+                            </a>
+                        </li>
+                        <li>
+                            <a href="challengeme.html">
+                                Challenge me !
+                            </a>
+                        </li>
+                        <li class="btn">
+                            <a href="contactme.html">
+                                Contact me
+                            </a>
+                        </li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <div class="containercontact">
+                <div class="contactInfo">
+                    <div>
+                        <h2>Contact Info</h2>
+                        <ul class="info">
+                            <li>
+                                <span><img src="../images/location.png"></span>
+                                <span>Route manzel chaker km 4<br>
+                                    Station kassas, Sfax<br>
+                                    3013, Tunisia.</span>
+                                </span>
+                            </li>
+                            <li>
+                                <span><img src="../images/mail.png"></span>
+                                <!-- <span>amirmrabet@iit.ens.tn</span> -->
+                                <span>amirmrabet@iit.ens.tn</span>
+                            </li>
+                            <li>
+                                <span><img src="../images/call.png"></span>
+                                <span>+216 23 685 438</span>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <ul class="social">
+                        <a href="https://www.facebook.com/amiri.mrabet/" target="_blank"><i
+                                class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/mrabetamir/" target="_blank"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/amir-mrabet-502b32168/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/Amirmrbt" target="_blank"><i class="fa-brands fa-github"></i></a>
+
+                    </ul>
+                </div>
+                <form onsubmit="sendEmail(); return false;">
+                    <div class="contactForm">
+                        <h2>Send a Message</h2>
+                        <div class="formBox">
+                            <div class="inputBox w50">
+                                <input type="text" name="firstName" required="required">
+                                <span>First Name</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="text" name="lastName" required="required">
+                                <span>Last Name</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="email" name="email" required="required">
+                                <span>Email Address</span>
+                            </div>
+                            <div class="inputBox w50">
+                                <input type="text" name="mobileNumber" required="required">
+                                <span>Mobile Number</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <textarea name="message" required="required"></textarea>
+                                <span>Write your message here...</span>
+                            </div>
+                            <div class="inputBox w100">
+                                <input type="submit" value="Send">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <script src="https://smtpjs.com/v3/smtp.js"></script>
+                <script>
+                    function sendEmail() {
+                        // Get the form data
+                        var firstName = document.forms[0].firstName.value;
+                        var lastName = document.forms[0].lastName.value;
+                        var email = document.forms[0].email.value;
+                        var mobileNumber = document.forms[0].mobileNumber.value;
+                        var message = document.forms[0].message.value;
+
+                        Email.send({
+                            Host: "smtp.gmail.com",
+                            Username: "amirmrabet40@gmail.com",
+                            Password: "password",
+                            To: 'them@website.com',
+                            From: "you@isp.com",
+                            Subject: "This is the subject",
+                            Body: "And this is the body"
+                        }).then(
+                            message => alert(message)
+                        );
+                    }
+                </script>
+            </div>
+            <div class="bottom">
+                <p> 2022 Amir Mrabet - All Rights Reserved.
+
+                </p>
+            </div>
+        </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
